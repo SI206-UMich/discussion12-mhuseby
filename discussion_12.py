@@ -16,6 +16,17 @@ def setUpDatabase(db_name):
 # TASK 1
 # CREATE TABLE FOR EMPLOYEE INFORMATION IN DATABASE AND ADD INFORMATION
 def create_employee_table(cur, conn):
+    f = open(os.path.abspath(os.path.join(os.path.dirname(filename))))
+    file_data = f.read()
+    f.close()
+
+    employee_data = json.loads(file_data)
+    for item in employee_data:
+        employee_id = int(item['employee_id'])
+        first_name = item['first_name']
+        last_name = item['lastname']
+        hire_data = item['hire_data']
+
     pass
 
 # ADD EMPLOYEE'S INFORMTION TO THE TABLE
@@ -27,19 +38,59 @@ def add_employee(filename, cur, conn):
     file_data = f.read()
     f.close()
     # THE REST IS UP TO YOU
+    f = open(os.path.abspath(os.path.join(os.path.dirname(filename))))
+    file_data = f.read()
+    f.close()
+
+    employee_data = json.loads(file_data)
+    for item in employee_data:
+        employee_id = int(item['employee_id'])
+        first_name = item['first_name']
+        last_name = item['lastname']
+        hire_data = item['hire_data']
     pass
 
 # TASK 2: GET JOB AND HIRE_DATE INFORMATION
 def job_and_hire_date(cur, conn):
+    f = open(os.path.abspath(os.path.join(os.path.dirname(filename))))
+    file_data = f.read()
+    f.close()
+
+    employee_data = json.loads(file_data)
+    for item in employee_data:
+        employee_id = int(item['employee_id'])
+        first_name = item['first_name']
+        last_name = item['lastname']
+        hire_data = item['hire_data']
     pass
 
 # TASK 3: IDENTIFY PROBLEMATIC SALARY DATA
 # Apply JOIN clause to match individual employees
 def problematic_salary(cur, conn):
+    f = open(os.path.abspath(os.path.join(os.path.dirname(filename))))
+    file_data = f.read()
+    f.close()
+
+    employee_data = json.loads(file_data)
+    for item in employee_data:
+        employee_id = int(item['employee_id'])
+        first_name = item['first_name']
+        last_name = item['lastname']
+        hire_data = item['hire_data']
     pass
 
 # TASK 4: VISUALIZATION
 def visualization_salary_data(cur, conn):
+    f = open(os.path.abspath(os.path.join(os.path.dirname(filename))))
+    file_data = f.read()
+    f.close()
+
+    employee_data = json.loads(file_data)
+    for item in employee_data:
+        employee_id = int(item['employee_id'])
+        first_name = item['first_name']
+        last_name = item['lastname']
+        hire_data = item['hire_data']
     pass
 
 class TestDiscussion12(unittest.TestCase):
